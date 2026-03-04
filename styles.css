@@ -169,6 +169,11 @@ img {
   justify-content: center;
 }
 
+video.video-placeholder {
+  width: 100%;
+  object-fit: cover;
+}
+
 .video-placeholder__icon {
   width: 48px;
   height: 48px;
