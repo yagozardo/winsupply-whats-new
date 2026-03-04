@@ -161,17 +161,13 @@ img {
 .video-placeholder {
   flex: 1;
   min-width: 0;
-  aspect-ratio: 16 / 9;
   background-color: var(--background-brand-input-hover);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 video.video-placeholder {
   width: 100%;
-  object-fit: cover;
+  display: block;
 }
 
 .video-placeholder__icon {
