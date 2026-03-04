@@ -1,0 +1,264 @@
+/* ============================================================
+   Design Tokens — Winsupply Figma Token Library
+   Source: Figma file WhatsNew-LP (FpfMOPpsGrTyTOHiOkDRLc)
+   All token names mirror the Figma variable library exactly.
+   ============================================================ */
+
+:root {
+  /* ── Content ─────────────────────────────────────────────── */
+  --content-primary:           #191c1e;
+  --content-secondary:         #454748;
+  --content-tertiary:          #6f7071;
+  --content-brand:             #0072cf;
+  --content-positive-bold:     #14644c;
+  --content-link-pressed:      #135286;
+  --content-primary-inverse:   #fcfdfd;
+  --content-secondary-inverse: #e2e2e2;
+
+  /* ── Background ──────────────────────────────────────────── */
+  --background-primary:           #fcfdfd;
+  --background-positive-subtle:   #dceee8;
+  --background-brand-subtle:      #e3eef7;
+  --background-brand-input-hover: #5ca1da;
+
+  /* ── Border ──────────────────────────────────────────────── */
+  --border-tertiary: #e2e2e2;
+
+  /* ── Surface ─────────────────────────────────────────────── */
+  --surface-themed-l1: #19344a;
+  --surface-themed-l2: #184366;
+
+  /* ── Typography / Text ───────────────────────────────────── */
+  --text-font-family:        'Inter', sans-serif;
+  --text-xl-size:            20px;
+  --text-xl-line-height:     28px;
+  --text-xl-letter-spacing:  0px;
+  --text-xl-weight:          400;
+  --text-l-size:             16px;
+  --text-l-line-height:      24px;
+  --text-l-letter-spacing:   0px;
+  --text-l-weight-regular:   400;
+  --text-l-weight-semibold:  600;
+  --text-m-size:             14px;
+  --text-m-line-height:      20px;
+  --text-m-letter-spacing:   0px;
+  --text-m-weight-semibold:  600;
+
+  /* ── Typography / Heading ────────────────────────────────── */
+  --heading-font-family:      'Satoshi', sans-serif;
+  --heading-weight:           700;
+  --heading-l-size:           32px;
+  --heading-l-line-height:    40px;
+  --heading-l-letter-spacing: -1px;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --space-l:   16px;
+  --space-4xl: 48px;
+}
+
+/* ============================================================
+   Base Reset
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+  font-family: var(--text-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================================================
+   Pill Component
+   Mirrors Figma component: Pill (Style=Positive / Style=Brand)
+   ============================================================ */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 8px 12px;
+  border-radius: 360px;
+  font-family: var(--text-font-family);
+  font-size: var(--text-m-size);
+  font-weight: var(--text-m-weight-semibold);
+  line-height: var(--text-m-line-height);
+  letter-spacing: var(--text-m-letter-spacing);
+  white-space: nowrap;
+}
+
+.pill--positive {
+  background-color: var(--background-positive-subtle);
+  color: var(--content-positive-bold);
+}
+
+.pill--brand {
+  background-color: var(--background-brand-subtle);
+  color: var(--content-link-pressed);
+}
+
+.pill--dark {
+  background-color: var(--surface-themed-l1);
+  color: var(--content-primary-inverse);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-weight);
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   Feature Row Component
+   Mirrors Figma: Feature Container - Text-Video / Video-Text
+   ============================================================ */
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4xl);
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.feature-row__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-heading {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-l-size);
+  font-weight: var(--heading-weight);
+  line-height: var(--heading-l-line-height);
+  letter-spacing: var(--heading-l-letter-spacing);
+  color: var(--content-primary);
+  margin: 0;
+}
+
+.feature-body {
+  font-family: var(--text-font-family);
+  font-size: var(--text-l-size);
+  font-weight: var(--text-l-weight-regular);
+  line-height: var(--text-l-line-height);
+  letter-spacing: var(--text-l-letter-spacing);
+  color: var(--content-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   Video Placeholder
+   Replace with <iframe> or <video> embed as needed.
+   ============================================================ */
+.video-placeholder {
+  flex: 1;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  background-color: var(--background-brand-input-hover);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder__icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder__icon::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.85);
+  margin-left: 3px;
+}
+
+/* ============================================================
+   Section Divider
+   ============================================================ */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-tertiary);
+  border: none;
+  margin: 0;
+}
+
+/* ============================================================
+   CTA Button
+   Mirrors Figma: Button component in Footer Container
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--content-primary-inverse);
+  color: var(--content-primary);
+  font-family: var(--text-font-family);
+  font-weight: var(--text-l-weight-semibold);
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
+  padding: 15px 16px 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-primary img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ============================================================
+   Responsive — Tablet & Mobile
+   ============================================================ */
+@media (max-width: 767px) {
+  /* Feature rows stack vertically */
+  .feature-row {
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* On mobile, Video-Text rows: show text above video */
+  .feature-row--video-text {
+    flex-direction: column-reverse;
+  }
+
+  .video-placeholder {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-row {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

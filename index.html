@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's New | Winsupply</title>
+  <meta name="description" content="On March 19th, Winsupply.com got a major upgrade — same trusted site, smarter tools to get you from order to jobsite faster." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Satoshi via Fontshare (used for headings per Figma token: Heading/Font-Family) -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN with custom token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            satoshi: ['Satoshi', 'sans-serif'],
+            inter:   ['Inter', 'sans-serif'],
+          },
+          // Colors reference CSS custom properties defined in styles.css
+          // to keep the single source of truth in the token layer.
+          colors: {
+            'content-primary':           'var(--content-primary)',
+            'content-secondary':         'var(--content-secondary)',
+            'content-tertiary':          'var(--content-tertiary)',
+            'content-brand':             'var(--content-brand)',
+            'content-positive-bold':     'var(--content-positive-bold)',
+            'content-link-pressed':      'var(--content-link-pressed)',
+            'content-primary-inverse':   'var(--content-primary-inverse)',
+            'content-secondary-inverse': 'var(--content-secondary-inverse)',
+            'bg-primary':                'var(--background-primary)',
+            'bg-positive-subtle':        'var(--background-positive-subtle)',
+            'bg-brand-subtle':           'var(--background-brand-subtle)',
+            'bg-brand-input-hover':      'var(--background-brand-input-hover)',
+            'border-tertiary':           'var(--border-tertiary)',
+            'surface-l1':                'var(--surface-themed-l1)',
+            'surface-l2':                'var(--surface-themed-l2)',
+          },
+          maxWidth: {
+            'page':    '1200px',
+            'content': '1008px',
+            'hero':    '800px',
+            'footer-body': '571px',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Design tokens + component styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-bg-primary font-inter text-content-primary">
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER / NAV
+       Figma: Hero > Container (3:10)
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="w-full bg-bg-primary">
+    <div class="mx-auto max-w-page px-6 md:px-12 lg:px-24 py-8">
+      <nav class="flex items-center justify-center gap-4 py-3" aria-label="Site navigation">
+
+        <!-- Logo
+             ⚠️  Figma asset URL expires in 7 days.
+             Replace with a permanent URL or local file: /assets/logo-winsupply.svg -->
+        <a href="./" aria-label="Winsupply home">
+          <img
+            src="assets/logo-winsupply.png"
+            alt="Winsupply"
+            class="h-9 w-auto object-contain"
+            width="130"
+            height="36"
+          />
+        </a>
+
+        <span class="text-border-tertiary font-semibold text-base select-none" aria-hidden="true">|</span>
+
+        <span
+          class="font-semibold text-content-secondary"
+          style="font-size: var(--text-l-size); line-height: var(--text-l-line-height);"
+        >
+          What's new
+        </span>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════════
+         HERO
+         Figma: Hero (3:9) > Container (3:22)
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="w-full bg-bg-primary px-6 md:px-12 lg:px-24 pb-16" aria-label="Hero">
+      <div class="mx-auto max-w-hero flex flex-col items-center gap-5 text-center">
+
+        <!-- Pill: Positive — Figma component: Pill (Style=Positive) -->
+        <span class="pill pill--positive">Live March 19, 2026</span>
+
+        <!-- Hero heading — Figma: Heading 2 (3:29) -->
+        <h1
+          class="font-satoshi font-bold text-center tracking-[-0.03em] leading-[1.1]"
+          style="font-size: clamp(36px, 5vw, 64px);"
+        >
+          <span class="text-content-primary block">We Listened.</span>
+          <span class="text-content-brand block">Here's What Changed.</span>
+        </h1>
+
+        <!-- Subtext — Figma: Paragraph (3:35), Text/XL/Regular token -->
+        <p
+          class="text-content-secondary font-normal text-center max-w-[720px]"
+          style="font-size: var(--text-xl-size); line-height: var(--text-xl-line-height);"
+        >
+          You told us what slows you down. So we got to work. On March 19th,
+          Winsupply.com got a major upgrade — same trusted site, smarter tools
+          to get you from order to jobsite faster.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         FEATURES SECTION
+         Figma: Container (3:38) > Container (3:39)
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="w-full bg-bg-primary px-6 md:px-12 lg:px-24 pt-14 pb-14" aria-label="What's new features">
+      <div class="mx-auto max-w-content">
+
+        <!-- Section label + rule — Figma: Container (3:40) -->
+        <div class="flex items-center gap-2">
+          <span
+            class="font-semibold text-content-tertiary whitespace-nowrap"
+            style="font-size: var(--text-m-size); line-height: var(--text-m-line-height);"
+          >
+            Latest Updates
+          </span>
+          <div class="flex-1 h-px bg-border-tertiary"></div>
+        </div>
+
+
+        <!-- ─────────────────────────────────────────────────────
+             Feature 1 — Text | Video
+             Figma: Feature Container - Text-Video (1:153)
+        ───────────────────────────────────────────────────── -->
+        <div class="feature-row feature-row--text-video" aria-label="Feature: One-and-Done Checkout">
+
+          <!-- Text Container (1:154) -->
+          <div class="feature-row__text">
+            <!-- Pill: Brand — Figma component: Pill (Style=Brand) -->
+            <span class="pill pill--brand">Fewer clicks. Zero wasted time.</span>
+            <!-- Title (1:158) — Heading/L token -->
+            <h2 class="feature-heading">One-and-Done Checkout</h2>
+            <!-- Paragraph (1:160) — Text/L/Regular token -->
+            <p class="feature-body">
+              You said checkout was slow. We cut the steps. Pre-populated fields,
+              saved shipping and payment details, and real local inventory
+              visibility mean less typing and more doing.
+            </p>
+          </div>
+
+          <!-- Video (1:161) — replace div with <iframe> or <video> embed -->
+          <div class="video-placeholder" role="img" aria-label="Video: One-and-Done Checkout demo">
+            <div class="video-placeholder__icon"></div>
+          </div>
+
+        </div>
+
+        <hr class="section-divider" />
+
+
+        <!-- ─────────────────────────────────────────────────────
+             Feature 2 — Video | Text
+             Figma: Feature Container - Video-Text (1:135)
+        ───────────────────────────────────────────────────── -->
+        <div class="feature-row feature-row--video-text" aria-label="Feature: Built for Your Phone">
+
+          <!-- Video (1:143) — replace div with <iframe> or <video> embed -->
+          <div class="video-placeholder" role="img" aria-label="Video: Built for Your Phone demo">
+            <div class="video-placeholder__icon"></div>
+          </div>
+
+          <!-- Text Container (1:136) -->
+          <div class="feature-row__text">
+            <span class="pill pill--brand">Order from the truck. No headache.</span>
+            <h2 class="feature-heading">Built for Your Phone</h2>
+            <p class="feature-body">
+              The new Winsupply is built for mobile — not just adapted for it.
+              Whether you're on the jobsite, in the warehouse, or in the cab,
+              the interface works the way your day does.
+            </p>
+          </div>
+
+        </div>
+
+        <hr class="section-divider" />
+
+
+        <!-- ─────────────────────────────────────────────────────
+             Feature 3 — Text | Video
+             Figma: Feature Container - Text-Video (1:80)
+        ───────────────────────────────────────────────────── -->
+        <div class="feature-row feature-row--text-video" aria-label="Feature: What You See Is What You Get">
+
+          <!-- Text Container (1:81) -->
+          <div class="feature-row__text">
+            <span class="pill pill--brand">No more surprises in the catalog.</span>
+            <h2 class="feature-heading">What You See Is What You Get</h2>
+            <p class="feature-body">
+              The products you browse as a guest are the same ones you see when
+              you're logged in. Consistent, clear, and tailored to your account
+              and local branch.
+            </p>
+          </div>
+
+          <!-- Video (1:88) — replace div with <iframe> or <video> embed -->
+          <div class="video-placeholder" role="img" aria-label="Video: What You See Is What You Get demo">
+            <div class="video-placeholder__icon"></div>
+          </div>
+
+        </div>
+
+        <hr class="section-divider" />
+
+
+        <!-- ─────────────────────────────────────────────────────
+             Feature 4 — Video | Text
+             Figma: Feature Container - Video-Text (1:162)
+        ───────────────────────────────────────────────────── -->
+        <div class="feature-row feature-row--video-text" aria-label="Feature: Your Location, Every Time">
+
+          <!-- Video (1:163) — replace div with <iframe> or <video> embed -->
+          <div class="video-placeholder" role="img" aria-label="Video: Your Location, Every Time demo">
+            <div class="video-placeholder__icon"></div>
+          </div>
+
+          <!-- Text Container (1:164) -->
+          <div class="feature-row__text">
+            <span class="pill pill--brand">Log in once. Land in the right place.</span>
+            <h2 class="feature-heading">Your Location, Every Time</h2>
+            <p class="feature-body">
+              Your local Winsupply is set from your first login and remembered
+              every visit. No more re-selecting your local company, no more
+              wasted navigation.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+       Figma: Footer Container (1:3)
+  ═══════════════════════════════════════════════════════════ -->
+  <footer>
+
+    <!-- Top Container (3:119) — CTA block -->
+    <div class="w-full bg-surface-l2 px-6 md:px-16 lg:px-24 py-20">
+      <div class="mx-auto max-w-footer-body flex flex-col items-center gap-6 text-center">
+
+        <!-- Dark pill — Figma: Container (3:121) -->
+        <span class="pill pill--dark">Your Feedback, Built In</span>
+
+        <!-- Subheader — Figma: Subheader (3:129) -->
+        <h2
+          class="font-satoshi font-bold text-content-primary-inverse text-center tracking-[-0.02em] leading-[1.1]"
+          style="font-size: clamp(28px, 4vw, 42px);"
+        >
+          Ready to see it for yourself?
+        </h2>
+
+        <!-- Body copy — Figma: text (3:134) -->
+        <p
+          class="font-normal text-content-secondary-inverse text-center"
+          style="font-size: var(--text-l-size); line-height: 21.6px; width: 100%;"
+        >
+          Log in and explore what's new. If you need a hand, your local team is
+          just a call away — or reach our Digital Help team at
+          <a
+            href="mailto:digitalhelp@winsupply.com"
+            class="font-bold text-content-secondary-inverse hover:text-white transition-colors underline-offset-2 hover:underline"
+          >
+            digitalhelp@winsupply.com
+          </a>
+        </p>
+
+        <!-- CTA Button — Figma: Button (3:136) -->
+        <a href="https://www.winsupplyinc.com" class="btn-primary">
+          Start Shopping Now
+          <!-- Arrow icon
+               ⚠️  Figma asset URL expires in 7 days.
+               Replace with a permanent URL or local file: /assets/icon-arrow.svg -->
+          <img
+            src="assets/icon-arrow.svg"
+            alt=""
+            aria-hidden="true"
+            width="20"
+            height="20"
+          />
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Bottom Container (3:142) — copyright bar -->
+    <div class="w-full bg-surface-l1 px-6 py-6">
+      <p
+        class="font-normal text-content-primary-inverse text-center"
+        style="font-size: 12px; line-height: 14.4px;"
+      >
+        © 2026 Winsupply, Inc. · digitalhelp@winsupply.com
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+</html>
